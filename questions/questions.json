@@ -1,0 +1,79 @@
+{
+  "categories": [
+    {
+      "name": "history",
+      "description":"How well do you know the timeline of history?",
+      "questions": [
+        {
+          "question": "When did the war of 1812 end?",
+          "answer": 1815,
+          "unit": "AD",
+          "source": "Wikipedia... This isn't a high school paper, I can cite Wikipedia"
+        },
+        {
+          "question": "When was the Russian Revolution?",
+          "answer": 1917,
+          "unit": "AD",
+          "source": "..."
+        },
+        {
+          "question": "When did India and Pakistan gain their independence?",
+          "answer": 1947,
+          "unit": "AD",
+          "source": "..."
+        },
+        {
+          "question": "When was the Qing Dynasty founded?",
+          "answer": 1644,
+          "unit": "AD",
+          "source": "..."
+        },
+        {
+          "question": "When did Alexander the Great die?",
+          "answer": 323,
+          "unit": "BC",
+          "source": "..."
+        },
+        {
+          "question": "When was the declaration of independence written?",
+          "answer": 1776,
+          "unit": "AD",
+          "source": "..."
+        },
+        {
+          "question": "When was Shaka, former king of the Zulus, born?",
+          "answer": 1787,
+          "unit": "AD",
+          "source": "..."
+        },
+        {
+          "question": "How old was King Tutankhamun when he died?",
+          "answer": 19,
+          "unit": "years",
+          "source": "..."
+        }
+      ]
+    },
+    {
+      "name": "geography",
+      "description":"Try your hand at different history facts",
+      "questions": [
+
+      ]
+    },
+    {
+      "name":"countries",
+      "description":"Try your hand at different history facts",
+      "questions": [
+
+      ]
+    },
+    {
+      "name": "celebrities",
+      "description":"Try your hand at different history facts",
+      "questions": [
+
+      ]
+    }
+  ]
+}

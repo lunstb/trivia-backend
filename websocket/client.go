@@ -45,8 +45,12 @@ type Message struct {
  *  - Content:	Content struct
  */
 type MessageContent struct {
-	Type    string `json:"type"`
+	Type    int    `json:"type"`
 	Content string `json:"content"`
+}
+
+type ReadyMessage struct {
+	Status bool `json:"status"`
 }
 
 /*
@@ -135,6 +139,32 @@ func (c *Client) Read() {
 			return
 		}
 
+		switch messageContent.Type {
+		case 0:
+			readyMessage := &ReadyMessage{}
+
+			err = json.Unmarshal([]byte(messageContent.Content), &readyMessage)
+			if err != nil {
+				log.Println(err)
+				return
+			}
+			c.PublicInfo.Ready = readyMessage.Status
+			c.Lobby.updateClientsStatus()
+
+			allPlayersReady := true
+
+			for player := range c.Lobby.Clients {
+				if !player.PublicInfo.Ready {
+					allPlayersReady = false
+				}
+			}
+
+			if allPlayersReady {
+				for player := range c.Lobby.Clients {
+					player.Send(Message{Type: 3, Body: "Game Starting"})
+				}
+			}
+		}
 		fmt.Println("Type:", messageContent.Type)
 		fmt.Println("Content:", messageContent.Content)
 	}

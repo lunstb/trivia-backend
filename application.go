@@ -8,6 +8,7 @@ import (
 
 	"github.com/gorilla/mux"
 
+	"./questions"
 	"./stringgen"
 	"./websocket"
 )
@@ -51,10 +52,21 @@ func serveWs(lobby *websocket.Lobby, w http.ResponseWriter, r *http.Request, nam
 func setupRoutes() {
 	rtr := mux.NewRouter()
 
-	rtr.HandleFunc("/test", func(w http.ResponseWriter, r *http.Request) {
+	rtr.HandleFunc("/getcategories", func(w http.ResponseWriter, r *http.Request) {
 		// enable CORS to allow browser to make call to API
 		enableCors(&w)
-		fmt.Fprintf(w, "Test Successful")
+
+		var categoryNames []string
+
+		categories := questions.GetCategories()
+
+		for _, category := range categories.Categories {
+			categoryNames = append(categoryNames, category.Name)
+		}
+
+		categoriesBytes, _ := json.Marshal(categoryNames)
+
+		fmt.Fprintf(w, string(categoriesBytes))
 	})
 	rtr.HandleFunc("/joingame/{id}/{name}", func(w http.ResponseWriter, r *http.Request) {
 		enableCors(&w)
