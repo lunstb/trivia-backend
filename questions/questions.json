@@ -1,7 +1,7 @@
 {
   "categories": [
     {
-      "name": "history",
+      "name": "History",
       "description":"How well do you know the timeline of history?",
       "questions": [
         {
@@ -55,21 +55,21 @@
       ]
     },
     {
-      "name": "geography",
+      "name": "Geography",
       "description":"Try your hand at different history facts",
       "questions": [
 
       ]
     },
     {
-      "name":"countries",
+      "name":"Countries",
       "description":"Try your hand at different history facts",
       "questions": [
 
       ]
     },
     {
-      "name": "celebrities",
+      "name": "Celebrities",
       "description":"Try your hand at different history facts",
       "questions": [
 

@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
+	"math/rand"
 	"os"
 )
 
@@ -40,4 +41,18 @@ func GetCategories() Categories {
 	json.Unmarshal(byteValue, &categories)
 
 	return categories
+}
+
+func GetRandomQuestionInCategory(categoryName string) *Question {
+	categories := GetCategories()
+
+	var selectedCategory *Category
+
+	for _, category := range categories.Categories {
+		if category.Name == categoryName {
+			selectedCategory = category
+		}
+	}
+
+	return selectedCategory.Questions[rand.Intn(len(selectedCategory.Questions))]
 }

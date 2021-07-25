@@ -56,12 +56,18 @@ func setupRoutes() {
 		// enable CORS to allow browser to make call to API
 		enableCors(&w)
 
-		var categoryNames []string
+		type CategoryInfo struct {
+			Name        string
+			Description string
+		}
+
+		var categoryNames []CategoryInfo
 
 		categories := questions.GetCategories()
 
 		for _, category := range categories.Categories {
-			categoryNames = append(categoryNames, category.Name)
+			categoryInfo := CategoryInfo{Name: category.Name, Description: category.Description}
+			categoryNames = append(categoryNames, categoryInfo)
 		}
 
 		categoriesBytes, _ := json.Marshal(categoryNames)
