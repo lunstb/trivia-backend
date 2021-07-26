@@ -27,6 +27,7 @@ type ClientPublicInfo struct {
 	Name   string
 	Ready  bool
 	Points int
+	Answer float32
 }
 
 /*
@@ -64,6 +65,14 @@ type MessageToClient struct {
 }
 
 /*
+ * Answer
+ *  - Answer:	Whatever answer the client responded
+ */
+type Answer struct {
+	Answer float32 `json:"answer,omitempty,string"`
+}
+
+/*
  * Response
  *  - Lobby:	Tells the client where it has been moved (likely lobby or game)
  */
@@ -81,6 +90,11 @@ type Content struct {
 	SongID  string `json:"songID,omitempty"`
 }
 
+/*
+ * ContentClient
+ *  - Client:
+ *  - Content:
+ */
 type ContentClient struct {
 	Client  *Client
 	Content *Content
@@ -160,10 +174,22 @@ func (c *Client) Read() {
 			}
 
 			if allPlayersReady {
-				for player := range c.Lobby.Clients {
-					player.Send(Message{Type: 3, Body: "Game Starting"})
-				}
+				go c.Lobby.countdownToStart()
 			}
+		case 1:
+			// This is where an answer would be thrown in
+			answer := &Answer{}
+
+			err = json.Unmarshal([]byte(messageContent.Content), &answer)
+			if err != nil {
+				log.Println(err)
+				return
+			}
+
+			c.PublicInfo.Answer = answer.Answer
+		case 2:
+			// This is where people deregister or whatever
+			c.Lobby.Unregister <- c
 		}
 		fmt.Println("Type:", messageContent.Type)
 		fmt.Println("Content:", messageContent.Content)
