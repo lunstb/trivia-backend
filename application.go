@@ -8,9 +8,9 @@ import (
 
 	"github.com/gorilla/mux"
 
-	"./questions"
-	"./stringgen"
-	"./websocket"
+	"trivia-backend/questions"
+	"trivia-backend/stringgen"
+	"trivia-backend/websocket"
 )
 
 type secretsJSON struct {
@@ -33,9 +33,9 @@ func serveWs(lobby *websocket.Lobby, w http.ResponseWriter, r *http.Request, nam
 	}
 
 	clientPublicInfo := &websocket.ClientPublicInfo{
-		Name:   name,
-		Ready:  false,
-		Points: 0,
+		Name:  name,
+		Ready: false,
+		Score: 0,
 	}
 
 	client := &websocket.Client{
@@ -73,6 +73,18 @@ func setupRoutes() {
 		categoriesBytes, _ := json.Marshal(categoryNames)
 
 		fmt.Fprintf(w, string(categoriesBytes))
+	})
+	rtr.HandleFunc("/gameexists/{id}", func(w http.ResponseWriter, r *http.Request) {
+		enableCors(&w)
+
+		vars := mux.Vars(r)
+		varID := vars["id"]
+
+		if _, ok := lobbies[varID]; ok {
+			fmt.Fprintf(w, "{\"Exists\":true}")
+		} else {
+			fmt.Fprintf(w, "{\"Exists\":false}")
+		}
 	})
 	rtr.HandleFunc("/joingame/{id}/{name}", func(w http.ResponseWriter, r *http.Request) {
 		enableCors(&w)

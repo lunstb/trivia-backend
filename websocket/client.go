@@ -24,10 +24,11 @@ type Client struct {
 }
 
 type ClientPublicInfo struct {
-	Name   string
-	Ready  bool
-	Points int
-	Answer float32
+	Name          string
+	Ready         bool
+	ScoreIncrease int
+	Score         int
+	Answer        float32
 }
 
 /*
