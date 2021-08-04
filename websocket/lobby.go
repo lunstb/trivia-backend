@@ -39,6 +39,7 @@ type ScoreUpdate struct {
 	Name          string
 	Score         int
 	ScoreIncrease int
+	Guess         float32
 }
 
 /*
@@ -123,7 +124,7 @@ func (lobby *Lobby) runGame() {
 		}
 
 		// Countdown
-		lobby.countDown(10)
+		lobby.countDown(30)
 
 		lobby.setPlayerScoreIncrease(*question)
 
@@ -136,11 +137,16 @@ func (lobby *Lobby) runGame() {
 			tmpScore.Name = player.PublicInfo.Name
 			tmpScore.Score = player.PublicInfo.Score
 			tmpScore.ScoreIncrease = player.PublicInfo.ScoreIncrease
+			tmpScore.Guess = player.PublicInfo.Answer
 			playerScores = append(playerScores, &tmpScore)
+
+			// Now reset guess to zero for next round
+			player.PublicInfo.Answer = 0
 		}
 
 		jsonPlayerScores, _ := json.Marshal(playerScores)
 		for player := range lobby.Clients {
+			// Send all the player score updates
 			player.Send(Message{Type: 5, Body: string(jsonPlayerScores)})
 		}
 
@@ -229,7 +235,7 @@ func (lobby *Lobby) Start() {
 				log.Println("Host unregister")
 
 				for client := range lobby.Clients {
-					client.Send(Message{Type: 1, Body: "Session Ended"})
+					client.Send(Message{Type: 7, Body: "Session Ended"})
 					delete(lobby.Clients, client)
 				}
 			} else {

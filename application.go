@@ -33,9 +33,10 @@ func serveWs(lobby *websocket.Lobby, w http.ResponseWriter, r *http.Request, nam
 	}
 
 	clientPublicInfo := &websocket.ClientPublicInfo{
-		Name:  name,
-		Ready: false,
-		Score: 0,
+		Name:   name,
+		Ready:  false,
+		Score:  0,
+		Answer: 0,
 	}
 
 	client := &websocket.Client{

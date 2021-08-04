@@ -56,24 +56,493 @@
     },
     {
       "name": "Geography",
-      "description":"Try your hand at different history facts",
+      "description":"Geography shtuff",
       "questions": [
-
+ {
+       "question": "How far is it from LA to Washington DC?",
+       "answer": 2674,
+       "unit": "miles",
+    "source" : "google"
+ },
+ {
+    "question" : "How tall is Mount Everest?",
+    "answer" : 29032,
+    "unit" : "feet",
+    "source" : "google"
+   },
+   {
+    "question" : "How many people successfully climb Mount Everest each year?",
+    "answer" : 500,
+    "unit" : "people",
+    "source" : "google"
+   },
+   {
+    "question" : "How many countries are there in Europe?",
+    "answer" : 44,
+    "unit" : "countries",
+    "source" : "google"
+   },
+   {
+    "question" : "How many states are there in America?",
+    "answer" : 50,
+    "unit" : "states",
+    "source" : "..."
+   },
+   {
+    "question" : "How long does it take to travel from Paris to Moscow by car?",
+    "answer" : 29,
+    "unit" : "hours",
+    "source" : "google"
+   },
+   {
+    "question" : "How many continents are there?",
+    "answer" : 7,
+    "unit" : "continents",
+    "source" : "..."
+   },
+   {
+    "question" : "How many countries are there in Africa?",
+    "answer" : 54,
+    "unit" : "countries",
+    "source" : "google"
+   },
+   {
+    "question" : "How wide is Russia?",
+    "answer" : 5600,
+    "unit" : "miles",
+    "source" : "google"
+   },
+   {
+    "question" : "How long is the Nile?",
+    "answer" : 4132,
+    "unit" : "miles",
+    "source" : "google"
+   },
+   {
+    "question" : "How many seas are there?",
+    "answer" : 50,
+    "unit" : "sea",
+    "source" : "google"
+   },
+   {
+    "question" : "How many oceans are there?",
+    "answer" : 4,
+    "unit" : "oceans",
+    "source" : "google"
+   },
+   {
+    "question" : "How many known pyramids are there in Egypt?",
+    "answer" : 118,
+    "unit" : "pyramids",
+    "source" : "google"
+   },
+   {
+    "question" : "How many active volcanoes are there in Nicaragua?",
+    "answer" : 19,
+    "unit" : "volcanoes",
+    "source" : "google"
+   },
+   {
+    "question" : "How wide is Canada?",
+    "answer" : 5780,
+    "unit" : "miles",
+    "source" : "google"
+   },
+   {
+    "question" : "How big is the world's largest lake?",
+    "answer" : 143244,
+    "unit" : "mi^2",
+    "source" : "google"
+   },
+   {
+    "question" : "How far is it from Hawaii to Japan?",
+    "answer" : 4108,
+    "unit" : "miles",
+    "source" : "google"
+   },
+   {
+    "question" : "How many permanent research stations are there in Antarctica?",
+    "answer" : 70,
+    "unit" : "stations",
+    "source" : "google"
+   },
+   {
+    "question" : "How many volcanoes erupt each year?",
+    "answer" : 70,
+    "unit" : "volcanoes",
+    "source" : "google"
+   },
+   {
+    "question" : "How many people have successfully climbed K2?",
+    "answer" : "377",
+    "unit" : "climbers",
+    "source" : "google"
+   },
+   {
+    "question" : "How tall is the tallest waterfall?",
+    "answer" : 11500,
+    "unit" : "feet",
+    "source" : "google"
+   },
+   {
+    "question" : "How many volcanoes does west Antarctica have?",
+    "answer" : 138,
+    "unit" : "volcanoes",
+    "source" : "google"
+   },
+   {
+    "question" : "How long is the Amazon River?",
+    "answer" : 3977,
+    "unit" : "miles",
+    "source" : "google"
+   },
+   {
+    "question" : "How many countries are in South America?",
+    "answer" : 14,
+    "unit" : "countries",
+    "source" : "google"
+   },
+   {
+    "question" : "How deep is the Mariana trench?",
+    "answer" : 36201,
+    "unit" : "feet",
+    "source" : "google"
+   },
+   {
+    "question" : "How long is the Peru-Chile trench?",
+    "answer" : 3700,
+    "unit" : "miles",
+    "source" : "google"
+   },
+   {
+    "question" : "How deep is the Grand Canyon?",
+    "answer" : "6001",
+    "unit" : "feet",
+    "source" : "google"
+   }
       ]
     },
     {
       "name":"Countries",
-      "description":"Try your hand at different history facts",
+      "description":"Greta you can come up with better descriptions if you want",
       "questions": [
-
+  
       ]
     },
     {
       "name": "Celebrities",
-      "description":"Try your hand at different history facts",
+      "description":"How well do you know your favorite celebrities?",
       "questions": [
-
+   {
+    "question" : "How many boyfriends has Taylor Swift had?",
+    "answer" : 12,
+    "unit" : "boyfriends",
+    "source" : "google"
+   },
+   {
+    "question" : "How many albums has Taylor Swift released?",
+    "answer" : 9,
+    "unit" : "albums",
+    "source" : "google"
+   },
+   {
+    "question" : "How many movies has Adam Sandler been in?",
+    "answer" : 61,
+    "unit" : "movies",
+    "source" : "google"
+   },
+   {
+    "question" : "How much money does Jeff Bezos make each second?",
+    "answer" : 3715,
+    "unit" : "dollars",
+     "source" : "google"
+   },
+   {
+    "question" : "How much is Billie Eilish worth?",
+    "answer" : 25,
+    "unit" : "million",
+    "source" : "google"
+   },
+   {
+    "question" : "How old is Selena Gomez?",
+    "answer" : 29,
+    "unit" : "years",
+    "source" : "google"
+   },
+   {
+    "question" : "How many albums has Ariana Grande released?",
+    "answer" : 6,
+    "unit" : "albums",
+    "source" : "google"
+   },
+   {
+    "question" : "How old is Ed Sheeran?",
+    "answer" : 30,
+    "unit" : "years",
+    "source" : "google"
+   },
+   {
+    "question" : "How old is Olivia Rodrigo?",
+    "answer" : 18,
+    "unit" : "years",
+    "source" : "google"
+   },
+   {
+    "question" : "How many albums has Doja Cat released?",
+    "answer" : 4,
+    "unit" : "albums",
+     "source" : "google"
+   },
+   {
+    "question" : "How many world tours has Nicki Minaj done (2021)?",
+    "answer" : 3,
+    "unit" : "world tours",
+    "source" : "google"
+   },
+   {
+    "question" : "How much does Gigi Hadid make per hour?",
+    "answer" : 1178,
+    "unit" : "dollars",
+    "source" : "google"
+   },
+   {
+    "question" : "How much does Kendall Jenner make per year?",
+    "answer" : 45,
+    "unit" : "million",
+    "source" : "google"
+   },
+   { 
+    "question" : "How much does Bill Gates make per year?",
+    "answer" : 4,
+    "unit" : "billion",
+    "source" : "google"
+   },
+   {
+    "question" : "What is Jeff Bezos’ net worth?",
+    "answer" : 192,
+    "unit" : "billion",
+    "source" : "google"
+   },
+   {
+    "question" : "When was Nicki Minaj born?",
+    "answer" : 1982,
+    "unit" : "AD",
+    "source" : "google"
+   },
+   {
+    "question" : "How many James Bond movies has Daniel Craig been in?",
+    "answer" : 5,
+    "unit" : "movies",
+    "source" : "google"
+   },
+   {
+    "question" : "How many avengers are there?",
+    "answer" : 16,
+    "unit" : "avengers",
+    "source" : "google"
+   },
+   {
+    "question" : "How many movies has Johnny Depp been in?",
+    "answer" : 79,
+    "unit" : "movies",
+    "source" : "google"
+   },
+   {
+    "question" : "When was Brad Pitt born?",
+    "answer" : 1963,
+    "unit" : "AD",
+    "source" : "google"
+   }
+  
+      ]
+    },
+    {
+      "name": "Astronomy",
+      "description":"How well do you know the universe we live in?",
+      "questions": [
+   {
+    "question" : "How far away is the nearest black hole?",
+    "answer" : 1500,
+    "unit" : "light years",
+    "source" : "google"
+   },
+   {
+    "question" : "How many stars die each day?",
+    "answer" : 275,
+    "unit" : "million",
+    "source" : "google"
+   },
+   {
+    "question" : "how far away is the sun?",
+    "answer" : 93000000,
+    "unit" : "miles",
+    "source" : "google"
+   },
+   {
+    "question" : "How long does it take light to reach us from the sun?",
+    "answer" : 8,
+    "unit" : "minutes",
+    "source" : "google"
+   },
+   {
+    "question" : "How far away can the Hubble space telescope see?",
+    "answer" : 15000000000,
+    "unit" : "light years",
+    "source" : "google"
+   },
+   {
+    "question" : "How long does a yellow dwarf star live?",
+    "answer" : 10000000000,
+    "unit" : "years",
+    "source" : "google"
+   },
+   {
+    "question" : "When was the first trip to mars?",
+    "answer" : 1965,
+    "unit" : "AD",
+    "source" : "google" 
+   },
+   {
+    "question" : "How long was the first trip to the moon?",
+    "answer" : 76,
+    "unit" : "hours",
+    "source" : "google"
+   },
+   {
+    "question" : "How far away is the nearest star that is not the sun?",
+    "answer" : 4,
+    "unit" : "light years",
+    "source" : "google"
+   },
+   {
+    "question" : "When did humans first land on the moon?",
+    "answer" : 1969,
+    "unit" : "AD",
+    "source" : "google"
+   },
+   {
+    "question" : "How many moons does Saturn have?",
+    "answer" : 82,
+    "unit" : "moons",
+    "source" : "google"
+   },
+   {
+    "question" : "How many miles away is Uranus from the sun",
+    "answer" : 2,
+    "unit" : "billion miles",
+    "source" : "google"
+   },
+   {
+    "question" : "How many Mars missions have there  been?",
+    "answer" : 49,
+    "unit" : "missions",
+    "source" : "google"
+   },
+   {
+    "question" : "How thick is the atmosphere?",
+    "answer" : 300,
+    "unit" : "miles",
+    "source" : "google"
+   },
+   {
+    "question" : "How thick is Mars?",
+    "answer" : 2106,
+    "unit" : "miles",
+    "source" : "google"
+   },
+   {
+    "question" : "How long does it take Neptune to orbit the sun?",
+    "answer" : 165,
+    "unit" : "years",
+    "source" : "google"
+   },
+   {
+    "question" : "How old is jupiter?",
+    "answer" : 4603000000,
+    "unit" : "years",
+    "source" : "google"
+   },
+   {
+    "question" : "How  many active volcanoes does Mars have?",
+    "answer" : 0,
+    "unit" : "volcanoes",
+    "source" : "google"
+   },
+   {
+    "question" : "How many dwarf planets are there in our solar system?",
+    "answer" : 6,
+    "unit" : "planets",
+    "source" : "google"
+   },
+   {
+    "question" : "How many planets are there in our solar system?",
+    "answer" : 8,
+    "unit" : "planets",
+    "source" : "..."
+   },
+   {
+    "question" : "How many gas planets are there in our solar system?",
+    "answer" : 4,
+    "unit" : "planets",
+    "source" : "google"
+   },
+   {
+   "question" : "How many solar systems are in the milky way",
+    "answer" : 5000,
+    "unit" : "solar systems",
+    "source" : "google"
+   },
+   {
+    "question" : "When was the first trip to space?",
+    "answer" : 1961,
+    "unit" : "AD",
+    "source" : "google"
+   },
+   {
+     "question" : "How long is the asteroid belt?",
+    "answer" : 600000,
+     "unit" : "miles",
+    "source" : "google"
+   },
+   {
+    "question" : "How long does it take the moon to orbit the earth?",
+    "answer" : 28,
+    "unit" : "days",
+    "source" : "google"
+   },
+   {
+    "question" : "How long does it take mercury to orbit the sun?",
+    "answer" : 88,
+    "unit" : "days",
+    "source" : "google"
+   },
+   {
+    "question" : "How long does it take the international space station to orbit the earth?",
+    "answer" : 88,
+    "unit" : "minutes",
+    "source" : "google"
+   },
+   {
+    "question" : "When did the first woman go to space?",
+    "answer" : 1963,
+    "unit" : "AD",
+    "source" : "google"
+   },
+   {
+    "question" : "How long does it take mercury to rotate on its axis?",
+    "answer" : 58,
+    "unit" : "days",
+    "source" : "google"
+   },
+   {
+    "question" : "How many stars are born on average each year?",
+    "answer" : 150,
+    "unit" : "billion",
+    "source" : "google"
+   }
       ]
     }
   ]
-}
+ }
+ 
+ 
